@@ -1,0 +1,187 @@
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/base.css");
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/accentlist.css");
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fixes.css");
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/jf_font.css");
+
+/** Icon Style*/
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Outline.css");
+
+/** Themes **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/presets/monochromic_preset.css");
+
+/** Color style **/
+@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/colorschemes/gray.css');
+
+/** Rounding **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/rounding_circlehover.css");
+
+/** Small Card **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/smallercast.css");
+
+/** Compact list **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/episodelist/episodes_compactlist.css");
+
+/** Header transparente **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/header/header_transparent.css");
+
+/** Login Screen**/
+@import url('https://cdn.jsdelivr.net/gh/stpnwf/ZestyTheme@latest/login-alt.css');
+
+/** Fields style **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/fields/fields_border.css");
+
+/** Indicator see **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/cornerindicator/indicator_floating.css");
+
+/** Title Page **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/titlepage/title_banner-logo.css");
+
+/**  Progress Bar **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/progress/floating.css");
+
+/** Effect **/
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/hoverglow.css");
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/glassy.css");
+@import url("https://cdn.jsdelivr.net/gh/CTalvio/Ultrachromic/effects/pan-animation.css");
+@import url("https://ctalvio.github.io/Monochromic/backdrop-hack_style.css");
+
+/* Style backdrop*/
+.backgroundContainer {
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  background-image: var(--bkg_img_desktop);
+}
+#loginPage {
+  background-image: none !important;
+}
+
+.trackSelections {
+  max-width: 100%;
+}
+
+.skinHeader.semiTransparent {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.editPageSidebar,
+.readOnlyContent,
+form {
+  border-radius: var(--rounding);
+  padding: 16px;
+  background-color: var(--bg_item) !important;
+  margin: 2vh auto;
+}
+
+.noHomeButtonHeader > .headerTabs {
+  display: none;
+}
+
+#indexPage {
+  margin-top: 5vh;
+}
+.libraryPage {
+  padding-top: 7vh !important;
+}
+.content-primary,
+.padded-bottom-page,
+.page,
+.pageWithAbsoluteTabs,
+.pageTabContent {
+  padding-bottom: 1vh !important;
+}
+
+/*Accent and roundingd */
+:root {
+  --accent: 45, 45, 55;
+  --bg_item: rgba(0, 0, 0, 0.5);
+  --rounding: 10px;
+  --bkg_img_desktop: url("https://github.com/kalibrado/jellyfin-themes-beauty/blob/main/images/nature-desktop.jpg?raw=true") !important;
+  --bkg_img_mobile: url("https://github.com/kalibrado/jellyfin-themes-beauty/blob/main/images/nature-mobile.jpg?raw=true") !important;
+}
+
+.layout-mobile .itemBackdrop {
+  margin-top: 6px !important;
+}
+
+/* Responsive */
+
+/* Smartphone */
+@media (max-width: 480px) {
+  .backgroundContainer {
+    background-image: var(--bkg_img_mobile);
+  }
+  .layout-mobile .itemBackdrop {
+    height: 0px !important;
+  }
+
+  .mainDetailButtons .focuscontainer-x {
+    background-color: var(--bg_item) !important;
+  }
+
+  .detailPageContent {
+    background-color: var(--bg_item) !important;
+    border-radius: var(--rounding);
+    padding: 10px;
+  }
+  .layout-mobile .detailPageWrapperContainer {
+    margin-top: 35%;
+    z-index: 0;
+  }
+}
+/* Desktop */
+@media (min-width: 481px) {
+  .skinHeader.semiTransparent {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    background-color: var(--bg_item) !important;
+  }
+  .detailPageSecondaryContainer {
+    background-color: var(--bg_item) !important;
+    border-radius: var(--rounding);
+    padding: 10px;
+    margin: 0 !important;
+  }
+}
+
+.layout-mobile .detailPagePrimaryContainer {
+  z-index: 1;
+}
+
+@media (min-width: 1177px) {
+  .itemBackdrop {
+    height: 40vh !important;
+    display: inherit;
+  }
+  .layout-mobile .detailImageContainer .card,
+  .layout-mobile .detailImageContainer .card.backdropCard,
+  .layout-mobile .detailImageContainer .card.squareCard {
+    top: auto !important;
+  }
+  .layout-mobile .detailImageContainer .card {
+    bottom: -100% !important;
+    -webkit-filter: drop-shadow(0 0 0.5rem #000) !important;
+    filter: drop-shadow(0 0 0.5rem #000) !important;
+    left: 5% !important;
+    max-width: 30vw !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1177px)  {
+  .layout-mobile .detailPageContent {
+    padding-left: 30%;
+    padding-right: 5%;
+  }
+  .layout-mobile .detailImageContainer .card {
+    bottom: -150% !important;
+    -webkit-filter: drop-shadow(0 0 0.5rem #000);
+    filter: drop-shadow(0 0 0.5rem #000);
+    left: 5%;
+    max-width: 30vw;
+  }
+}
+ 
