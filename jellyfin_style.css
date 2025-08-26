@@ -100,8 +100,8 @@ form {
   --accent: 45, 45, 55;
   --bg_item: rgba(0, 0, 0, 0.5);
   --rounding: 10px;
-  --bkg_img_desktop: url("https://github.com/kalibrado/jellyfin-themes-beauty/blob/main/images/nature-desktop.jpg?raw=true") !important;
-  --bkg_img_mobile: url("https://github.com/kalibrado/jellyfin-themes-beauty/blob/main/images/nature-mobile.jpg?raw=true") !important;
+  --bkg_img_desktop: "https://rawcdn.githack.com/kalibrado/jellyfin-themes-beauty/dfad914984ec2200808626501ac6c9fa3f2da470/images/galaxy-desktop.jpg";
+  --bkg_img_mobile: "https://rawcdn.githack.com/kalibrado/jellyfin-themes-beauty/dfad914984ec2200808626501ac6c9fa3f2da470/images/galaxy-mobile.jpg";
 }
 
 .layout-mobile .itemBackdrop {
